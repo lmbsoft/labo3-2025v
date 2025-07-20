@@ -1,0 +1,15 @@
+Resumen Validación 201912 - product
+============================================================
+Entrenamiento hasta: 2019-10-01
+Predicción objetivo: 2019-12-01
+Hiperparámetros: Optimizados con v6_log_ratio_advanced
+Total productos: 780
+Total toneladas predichas: 27,228.25
+Estrategia: y = log1p(tn_future) - log1p(tn_current)
+Features: 242 (incluye avanzadas)
+
+Propósito:
+- Medir confianza del modelo en fecha conocida
+- Comparar vs datos reales 201912 para Total Error Rate
+- Usar como métrica para ensemble inteligente vs otras granularidades
+- Selección producto por producto del mejor modelo

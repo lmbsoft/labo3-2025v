@@ -1,0 +1,101 @@
+{
+  "execution_summary": {
+    "start_time": "2025-07-20T03:46:51.715982",
+    "end_time": "2025-07-20T14:36:09.984153",
+    "total_duration_seconds": 38958.268171,
+    "system_info": {
+      "cpu_count": 8,
+      "cpu_count_physical": 4,
+      "memory_gb": 60.79362106323242,
+      "platform": "posix",
+      "polars_available": false
+    },
+    "smoothing_config": {
+      "enabled": false,
+      "method": "exponential",
+      "alpha": 0.3
+    }
+  },
+  "phase_reports": {
+    "phase1_product": {
+      "start_time": "2025-07-20T03:46:58.748547",
+      "end_time": "2025-07-20T03:50:51.216837",
+      "total_duration": 232.46829,
+      "phase": "phase1",
+      "granularity": "product",
+      "total_series": 0,
+      "processed_series": 0,
+      "zero_series": 0,
+      "failed_series": 0,
+      "short_series": 0,
+      "cpu_usage_avg": 0.0,
+      "memory_usage_mb": 8.0,
+      "series_per_second": 0.0,
+      "forecast_results": {},
+      "phase1_metrics": {
+        "mae": 11.469950956266658,
+        "rmse": 32.745543199993314,
+        "total_error": 8946.561745887993,
+        "wape_modificado": 0.35579526971630154,
+        "n_comparisons": 780
+      }
+    },
+    "phase1_product_customer": {
+      "start_time": "2025-07-20T03:51:02.200923",
+      "end_time": "2025-07-20T07:23:19.679579",
+      "total_duration": 12737.478656,
+      "phase": "phase1",
+      "granularity": "product_customer",
+      "total_series": 0,
+      "processed_series": 0,
+      "zero_series": 0,
+      "failed_series": 0,
+      "short_series": 0,
+      "cpu_usage_avg": 0.0,
+      "memory_usage_mb": 1731.796875,
+      "series_per_second": 0.0,
+      "forecast_results": {},
+      "phase1_metrics": {
+        "mae": 0.337514922836153,
+        "rmse": 2.2496375800976742,
+        "total_error": 17890.9910296988,
+        "wape_modificado": 0.7115057336780056,
+        "n_comparisons": 53008
+      }
+    },
+    "phase2_product": {
+      "start_time": "2025-07-20T07:23:21.596130",
+      "end_time": "2025-07-20T07:27:53.395202",
+      "total_duration": 271.799072,
+      "phase": "phase2",
+      "granularity": "product",
+      "total_series": 0,
+      "processed_series": 0,
+      "zero_series": 0,
+      "failed_series": 0,
+      "short_series": 0,
+      "cpu_usage_avg": 0.0,
+      "memory_usage_mb": -0.98828125,
+      "series_per_second": 0.0,
+      "forecast_results": {},
+      "phase1_metrics": null
+    },
+    "phase2_product_customer": {
+      "start_time": "2025-07-20T07:28:04.389521",
+      "end_time": "2025-07-20T14:36:08.665358",
+      "total_duration": 25684.275837,
+      "phase": "phase2",
+      "granularity": "product_customer",
+      "total_series": 0,
+      "processed_series": 0,
+      "zero_series": 0,
+      "failed_series": 0,
+      "short_series": 0,
+      "cpu_usage_avg": 0.0,
+      "memory_usage_mb": 2236.5390625,
+      "series_per_second": 0.0,
+      "forecast_results": {},
+      "phase1_metrics": null
+    }
+  }
+}

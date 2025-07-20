@@ -1,0 +1,34 @@
+Resumen Visualizaciones - Features Avanzadas v11
+======================================================================
+Granularidad: product
+Feature Version: v6_log_ratio_advanced
+Cache Level: Nivel 3 (_ii) - Features Avanzadas
+Estrategia: y = log1p(tn_future) - log1p(tn_current) + Advanced Features
+Fecha generación: 2025-07-19 15:07:35
+Total productos a predecir: 780
+Productos procesados: 780
+Productos sin datos históricos: 0
+Productos sin predicción: 0
+Período histórico: 2017-01 a 2019-12
+Predicción para: 2020-02
+
+Features Avanzadas Implementadas:
+- A. Productos Relacionados: contexto 3 niveles categorías
+- B. Estacionalidad Avanzada: fourier + eventos argentinos
+- C. Momentum/Aceleración: slopes + cambios volatilidad
+- D. Patrones Consumo: skewness + regularidad temporal
+
+Archivos generados:
+  - PDF compilado: series_temporales_product_advanced.pdf
+  - Imágenes individuales: 780 archivos PNG
+
+Uso recomendado:
+  - Revisar PDF para análisis secuencial completo
+  - Usar PNG individuales para consultas a LLM multimodal
+  - Validar razonabilidad de predicciones con features avanzadas
+  - Comparar vs. versiones anteriores para evaluar mejoras
+
+Objetivo:
+  - Superar meseta de optimización con features de alto impacto
+  - Reducir Total Error Rate mediante contexto categorial
+  - Mejorar captación de patrones estacionales complejos

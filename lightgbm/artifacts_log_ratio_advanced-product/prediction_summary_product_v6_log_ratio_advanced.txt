@@ -1,0 +1,17 @@
+Resumen Predicción Final - FEATURES AVANZADAS (product)
+================================================================================
+Total toneladas predichas para 2020-02: 27,226.12
+Estrategia: y = log1p(tn_future) - log1p(tn_current) + Features Avanzadas
+Cache Level 3: v6_log_ratio_advanced_ii
+Search Space: EXPANDIDO (max_depth, min_gain_to_split, subsample_for_bin)
+Total features: 242
+Features avanzadas creadas: 31
+Features avanzadas en Top-20: 4/20
+
+Mejoras implementadas:
+- A. Features de Productos Relacionados (contexto categorías)
+- B. Features de Estacionalidad Avanzada (fourier, eventos)
+- C. Features de Momentum y Aceleración (slopes, volatilidad)
+- D. Features de Patrones de Consumo (skewness, regularidad)
+- Search space expandido en Optuna
+- HyperbandPruner para exploración agresiva

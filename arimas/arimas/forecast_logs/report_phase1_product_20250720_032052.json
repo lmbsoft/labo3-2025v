@@ -1,0 +1,23 @@
+{
+  "start_time": "2025-07-20T03:17:07.399804",
+  "end_time": "2025-07-20T03:20:52.669301",
+  "total_duration": 225.269497,
+  "phase": "phase1",
+  "granularity": "product",
+  "total_series": 0,
+  "processed_series": 0,
+  "zero_series": 0,
+  "failed_series": 0,
+  "short_series": 0,
+  "cpu_usage_avg": 0.0,
+  "memory_usage_mb": 7.8046875,
+  "series_per_second": 0.0,
+  "forecast_results": {},
+  "phase1_metrics": {
+    "mae": 11.469950956266658,
+    "rmse": 32.745543199993314,
+    "total_error": 8946.561745887993,
+    "wape_modificado": 0.35579526971630154,
+    "n_comparisons": 780
+  }
+}

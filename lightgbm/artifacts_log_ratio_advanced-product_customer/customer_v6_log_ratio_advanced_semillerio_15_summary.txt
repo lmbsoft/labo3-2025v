@@ -1,0 +1,43 @@
+Resumen del Ensemble - FEATURES AVANZADAS v11
+================================================================================
+Granularidad: customer
+Feature Version: v6_log_ratio_advanced
+Cache Level: Nivel 3 (_ii) - Features Avanzadas
+Estrategia: y = log1p(tn_future) - log1p(tn_current) + Advanced Features
+Parámetros: ALINEADOS con optimización Optuna (NO hardcodeados)
+Framework: Lags 0-24 consistentemente escalados
+Feature principal: tn_lag_0 (valor actual escalado)
+Número de modelos ensamblados: 15
+Total toneladas predichas: 19,775.08
+
+Features Avanzadas Implementadas:
+- A. Features de Productos Relacionados (contexto categorías 3 niveles)
+- B. Features de Estacionalidad Avanzada (fourier + eventos argentinos)
+- C. Features de Momentum y Aceleración (slopes + volatilidad)
+- D. Features de Patrones de Consumo (skewness + regularidad)
+
+Mejoras de Alineación:
+- ✅ Usa cfg.LGBM_FIXED_PARAMS.copy() + best_params
+- ✅ NO hardcodea lambda_l1, lambda_l2
+- ✅ Incluye bagging_freq=1 como main
+- ✅ Reintentos solo cambian semilla, no parámetros
+
+Archivos incluidos en el ensemble:
+--------------------------------------------------------------------------------
+  - submission_202002_customer_v6_log_ratio_advanced_seed1019.csv: 19,905.4 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed1021.csv: 19,893.6 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed1031.csv: 19,780.3 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed301.csv: 19,704.7 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed307.csv: 19,744.9 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed311.csv: 19,746.0 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed313.csv: 19,524.2 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed317.csv: 20,131.2 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed501.csv: 19,729.7 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed503.csv: 19,532.3 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed509.csv: 19,556.8 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed521.csv: 19,883.1 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed523.csv: 19,916.7 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed541.csv: 19,742.6 tn
+  - submission_202002_customer_v6_log_ratio_advanced_seed547.csv: 19,834.8 tn
+
+🎯 Objetivo: Superar meseta con features avanzadas + parámetros alineados

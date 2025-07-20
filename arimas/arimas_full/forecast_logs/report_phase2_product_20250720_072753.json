@@ -1,0 +1,17 @@
+{
+  "start_time": "2025-07-20T07:23:21.596130",
+  "end_time": "2025-07-20T07:27:53.395202",
+  "total_duration": 271.799072,
+  "phase": "phase2",
+  "granularity": "product",
+  "total_series": 0,
+  "processed_series": 0,
+  "zero_series": 0,
+  "failed_series": 0,
+  "short_series": 0,
+  "cpu_usage_avg": 0.0,
+  "memory_usage_mb": -0.98828125,
+  "series_per_second": 0.0,
+  "forecast_results": {},
+  "phase1_metrics": null
+}

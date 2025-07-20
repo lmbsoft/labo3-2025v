@@ -1,0 +1,176 @@
+Resumen del Ensemble - FEATURES AVANZADAS v11
+================================================================================
+Granularidad: product
+Feature Version: v6_log_ratio_advanced
+Cache Level: Nivel 3 (_ii) - Features Avanzadas
+Estrategia: y = log1p(tn_future) - log1p(tn_current) + Advanced Features
+Parámetros: ALINEADOS con optimización Optuna (NO hardcodeados)
+Framework: Lags 0-24 consistentemente escalados
+Feature principal: tn_lag_0 (valor actual escalado)
+Número de modelos ensamblados: 148
+Total toneladas predichas: 26,908.95
+
+Features Avanzadas Implementadas:
+- A. Features de Productos Relacionados (contexto categorías 3 niveles)
+- B. Features de Estacionalidad Avanzada (fourier + eventos argentinos)
+- C. Features de Momentum y Aceleración (slopes + volatilidad)
+- D. Features de Patrones de Consumo (skewness + regularidad)
+
+Mejoras de Alineación:
+- ✅ Usa cfg.LGBM_FIXED_PARAMS.copy() + best_params
+- ✅ NO hardcodea lambda_l1, lambda_l2
+- ✅ Incluye bagging_freq=1 como main
+- ✅ Reintentos solo cambian semilla, no parámetros
+
+Archivos incluidos en el ensemble:
+--------------------------------------------------------------------------------
+  - submission_202002_product_v6_log_ratio_advanced_seed1019.csv: 26,870.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1021.csv: 26,767.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1031.csv: 26,818.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1033.csv: 27,019.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1039.csv: 26,668.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1049.csv: 26,780.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1051.csv: 26,949.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1061.csv: 26,852.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1063.csv: 26,866.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1069.csv: 27,285.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1087.csv: 26,842.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1091.csv: 26,849.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1093.csv: 26,848.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1097.csv: 26,827.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1103.csv: 27,003.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1109.csv: 26,908.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1117.csv: 26,949.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1123.csv: 27,087.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1129.csv: 26,975.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1151.csv: 26,856.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1153.csv: 26,835.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1163.csv: 26,824.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1171.csv: 26,966.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1181.csv: 26,961.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1187.csv: 26,997.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1193.csv: 27,020.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1201.csv: 27,080.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1213.csv: 26,949.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1217.csv: 27,017.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1223.csv: 26,680.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1229.csv: 27,053.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1231.csv: 26,850.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1237.csv: 26,635.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1249.csv: 26,907.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1259.csv: 27,072.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1277.csv: 27,065.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1279.csv: 26,941.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1283.csv: 26,976.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1289.csv: 27,033.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1291.csv: 27,016.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1297.csv: 27,077.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1301.csv: 27,122.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1303.csv: 26,777.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1307.csv: 26,942.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1319.csv: 26,994.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1321.csv: 26,865.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1327.csv: 27,003.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1361.csv: 26,944.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1367.csv: 27,114.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1373.csv: 26,985.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1399.csv: 27,005.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1409.csv: 27,105.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1423.csv: 26,864.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1427.csv: 27,153.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1429.csv: 26,799.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1433.csv: 26,750.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1439.csv: 26,773.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1447.csv: 26,878.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1451.csv: 27,027.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1453.csv: 27,091.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1459.csv: 26,902.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1471.csv: 26,905.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1481.csv: 26,749.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1483.csv: 27,039.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1487.csv: 26,847.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1489.csv: 27,050.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1493.csv: 26,882.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1499.csv: 26,841.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1511.csv: 27,000.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1523.csv: 26,813.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1531.csv: 27,089.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1543.csv: 26,984.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1549.csv: 26,842.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1553.csv: 26,891.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1559.csv: 26,877.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1567.csv: 27,089.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1571.csv: 26,666.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1579.csv: 27,095.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1583.csv: 26,886.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1597.csv: 26,888.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1601.csv: 26,911.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1607.csv: 26,804.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1609.csv: 26,740.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1613.csv: 26,762.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1619.csv: 26,890.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1621.csv: 27,053.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1627.csv: 27,017.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1637.csv: 26,837.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1657.csv: 26,974.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1663.csv: 26,826.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1667.csv: 26,822.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1669.csv: 26,824.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1693.csv: 26,994.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1697.csv: 26,791.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1699.csv: 26,972.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1709.csv: 27,053.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1721.csv: 26,977.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1723.csv: 26,868.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1733.csv: 26,910.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1741.csv: 26,619.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1747.csv: 26,816.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1753.csv: 26,922.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1759.csv: 26,980.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1777.csv: 26,888.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1783.csv: 26,846.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1787.csv: 26,901.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1789.csv: 26,849.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1801.csv: 26,942.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1811.csv: 26,740.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1823.csv: 27,002.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1831.csv: 26,963.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1847.csv: 26,927.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1861.csv: 27,032.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1867.csv: 26,659.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1871.csv: 26,812.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1873.csv: 27,186.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1877.csv: 26,790.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1889.csv: 26,927.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1901.csv: 27,093.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1907.csv: 26,815.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1913.csv: 26,775.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1931.csv: 27,003.0 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed1933.csv: 26,974.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed301.csv: 26,594.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed307.csv: 27,047.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed311.csv: 26,876.6 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed313.csv: 27,006.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed317.csv: 26,818.4 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed331.csv: 26,753.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed337.csv: 26,747.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed347.csv: 26,712.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed349.csv: 26,804.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed353.csv: 26,964.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed359.csv: 26,921.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed367.csv: 26,859.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed373.csv: 26,938.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed379.csv: 26,918.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed383.csv: 26,896.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed389.csv: 26,909.5 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed397.csv: 27,048.3 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed401.csv: 26,996.2 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed409.csv: 26,764.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed419.csv: 26,847.7 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed421.csv: 26,642.8 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed431.csv: 27,116.9 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed433.csv: 26,812.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed439.csv: 26,771.1 tn
+  - submission_202002_product_v6_log_ratio_advanced_seed443.csv: 26,713.5 tn
+
+🎯 Objetivo: Superar meseta con features avanzadas + parámetros alineados
