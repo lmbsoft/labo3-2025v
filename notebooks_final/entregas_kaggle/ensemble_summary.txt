@@ -1,0 +1,52 @@
+Resumen de Ensambles - Todos los CSV válidos
+==================================================
+Archivos procesados: 30
+
+Archivos incluidos:
+  - Autogluon_Tabular_Pronostico_202002_Por_Producto.csv
+  - forecast_customer_producto_agregado_prophet_202002.csv
+  - forecast_customer_producto_agregado_prophet_202002_v2.csv
+  - forecast_customer_producto_agregado_prophet_202002_v3.csv
+  - forecast_customer_producto_serie.csv
+  - forecast_customer_producto_serie_optimizado.csv
+  - forecast_customer_producto__fullpower_SinEscalar.csv
+  - forecast_final_desescalado.csv
+  - forecast_final_desescalado_optimizado.csv
+  - forecast_product_phase1_con_real.csv
+  - forecast_tabular_clusters_202002_full.csv
+  - forecast_total_202002.csv
+  - forecast_total_top_100_202002.csv
+  - forecast_total_top_150y100_Ensamble_202002.csv
+  - forecast_total_top_150_202002.csv
+  - forecast_total_top_20_202002.csv
+  - forecast_total_top_70_202002.csv
+  - pred_trivial_avg_201807_201912.csv
+  - pred_trivial_avg_201901_201912.csv
+  - pred_trivial_avg_201904_201912.csv
+  - pred_trivial_avg_201907_201912.csv
+  - pred_trivial_avg_201910_201912.csv
+  - pred_trivial_last_201912.csv
+  - pronostico_cliente_producto_202002.csv
+  - pronostico_productos_202002_AutoGluon.csv
+  - pronostico_productos_202002_Autogluon_II.csv
+  - pronostico_regresion_lineal_202002_V2.csv
+  - pronostico_regresion_lineal_202002_V3.csv
+  - pronostico_tabular_202002.csv
+  - pronostico_tabular_202002_Autogluon_Por_Prod_Tabular.csv
+
+Totales predichos:
+  - Mediana: 29,345.73 toneladas
+  - Media: 29,594.96 toneladas
+  - Media sin outliers: 29,090.45 toneladas
+
+Top 10 productos por volumen (ensemble mediana):
+  - Producto 20001.0: 1,419.78 tn
+  - Producto 20002.0: 1,171.53 tn
+  - Producto 20003.0: 824.41 tn
+  - Producto 20004.0: 637.89 tn
+  - Producto 20005.0: 579.22 tn
+  - Producto 20009.0: 548.66 tn
+  - Producto 20032.0: 525.93 tn
+  - Producto 20006.0: 463.85 tn
+  - Producto 20010.0: 420.77 tn
+  - Producto 20007.0: 389.72 tn
