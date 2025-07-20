@@ -3,8 +3,6 @@
 Universidad Austral
 materia **Laboratorio III**. 
 Profesor: Gustavo Denicolay
-Estudiante: Leandro Boisselier
-
 
 Aquí se incluyen los scripts y artefactos más relevantes de cada estrategia utilizada. Durante la construcción, iteración y documentación de los pipelines de cada estrategia se utilizó asistencia generativa.
 
